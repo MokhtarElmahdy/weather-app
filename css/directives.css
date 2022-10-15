@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-image: url("../imgs/sunny.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search {
+  @apply my-10;
+}
+
+.form-group {
+  @apply flex justify-between p-1 rounded-full w-1/2 mx-auto;
+}
+.form-group .form-input {
+  @apply w-full focus-within:outline-none focus-visible:outline-none px-2;
+}
+.form-group .btn-submit {
+  @apply py-1 px-8 rounded-full;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+  filter: blur(6px);
+}
+
+.date {
+  @apply flex justify-between;
+}
+
+.temp_c {
+  @apply flex justify-between items-center my-3;
+}
+.temp_c p {
+  @apply text-8xl inline-block;
+}
+.temp_c img {
+  @apply inline;
+}
+
+.wind {
+  @apply flex gap-5 mt-3;
+}
+.wind p {
+  @apply flex gap-2 items-center;
+}/*# sourceMappingURL=directives.css.map */
